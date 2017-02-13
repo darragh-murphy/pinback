@@ -10,7 +10,7 @@
     , timer;
 
   // make sure user is logged in and on profile page
-  if (location.hostname.match(/pinterest.com$/) && document.querySelector('.usernameLink')) {
+  if (location.hostname.match(/uk.pinterest.com$/) && document.querySelector('.usernameLink')) {
     if (document.querySelector('.boardLinkWrapper')) {
       // already on profile page
       start();
@@ -22,7 +22,7 @@
       profile_link.click();
     }
   } else {
-    alert('Log in and visit your profile to start (pinterest.com/username)');
+    alert('Log in and visit your profile to start (uk.pinterest.com/username)');
     return false;
   }
 
@@ -147,7 +147,7 @@
           if (!boards[p.board.name]) boards[p.board.name] = {
             id:           p.board.id,
             name:         p.board.name,
-            url:          "https://www.pinterest.com"+p.board.url,
+            url:          "https://uk.pinterest.com"+p.board.url,
             privacy:      p.board.privacy,
             pins:         []
           }
@@ -156,7 +156,7 @@
             id:           p.id,
             link:         p.link,
             description:  p.description,
-            url:          "https://www.pinterest.com/pin/"+p.id,
+            url:          "https://uk.pinterest.com/pin/"+p.id,
             image:        p.images.orig.url,
             color:        p.dominant_color,
             longitude:    (p.place && p.place.longitude) || null,
